@@ -1,2 +1,2 @@
-# exercises
-Coding exercises and practice
+# Exercises
+A repository of coding exercises and practice.
