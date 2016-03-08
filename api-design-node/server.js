@@ -2,13 +2,20 @@
 // that will send back the index.html file on a GET request to '/'
 // it should then send back jsonData on a GET to /data
 
+var fs = require('fs');
 var express = require('express');
 var app = express();
 
 var jsonData = {count: 12, message: 'hey'};
 
 app.get('/', function(req, res) {
-	res.send('index.html');
+	fs.readFile('/index.html', function(err, data) {
+		if (err) {
+			throw err;
+		} else {
+			console.log(data);
+		}
+	});
 });
 
 app.get('/data', function(req, res) {
