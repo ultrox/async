@@ -23,5 +23,25 @@ var id = 0;
 
 // TODO: make the REST routes to perform CRUD on lions
 
+app.get('/lions', function(req, res) {
+	res.status().send();
+});
+
+app.get('/lions/:id', function(req, res) {
+	res.status().send();
+});
+
+app.post('/lions/:id', function(req, res) {
+	res.status().send();
+});
+
+app.put('/lions/:id', function(req, res) {
+	res.status().send();
+});
+
+app.delete('/lions/:id', function(req, res) {
+	res.status().send();
+});
+
 app.listen(3000);
 console.log('on port 3000');
