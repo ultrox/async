@@ -43,5 +43,6 @@ app.delete('/lions/:id', function(req, res) {
 	res.status().send();
 });
 
-app.listen(3000);
-console.log('on port 3000');
+app.listen(3000, function() {
+	console.log('on port 3000');
+});
