@@ -45,7 +45,9 @@ app.put('/lions/:id', function(req, res) {
 });
 
 app.delete('/lions/:id', function(req, res) {
-	res.status(200).send();
+	var deletedLion = lions[req.params.id];
+	lions.splice(req.params.id, 1)
+	res.status(200).send(deletedLion);
 });
 
 app.listen(3000, function() {
