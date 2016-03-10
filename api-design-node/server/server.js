@@ -24,17 +24,19 @@ var id = 0;
 // TODO: make the REST routes to perform CRUD on lions
 
 app.get('/lions', function(req, res) {
-	res.status(200).json(lions);
+	console.log(req.body)
+	res.status(200).send(lions);
 });
 
 app.get('/lions/:id', function(req, res) {
-	res.status().send();
+	console.log(req.body.params)
+	res.status(200).send(lions[req.params.id]);
 });
 
-app.post('/lions/:id', function(req, res) {
+app.post('/lions/', function(req, res) {
 	lions.push(req.body);
+	res.status(201).send(lions[id]);
 	id++;
-	res.status(201).json(lions[id]);
 });
 
 app.put('/lions/:id', function(req, res) {
