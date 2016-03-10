@@ -40,11 +40,12 @@ app.post('/lions/', function(req, res) {
 });
 
 app.put('/lions/:id', function(req, res) {
-	res.status().send();
+	lions[req.params.id] = req.body;
+	res.status(200).send(lions[req.params.id]);
 });
 
 app.delete('/lions/:id', function(req, res) {
-	res.status().send();
+	res.status(200).send();
 });
 
 app.listen(3000, function() {
