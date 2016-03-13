@@ -36,6 +36,12 @@ app.param('id', function(req, res, next, id) {
   next()
 });
 
+router.post('/lions', function(req, res, next) {
+  id++;
+  req.body.id = id;
+  next();
+});
+
 app.get('/lions', function(req, res){
   res.json(lions);
 });
