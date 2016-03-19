@@ -1,9 +1,12 @@
 CFLAGS=-Wall -g
 
-all: clean ax1 ls
-
 clean:
 	rm -f ax1
+
+all: 
+	clean 
+	ax1 
+	ls
 
 ls:
 	ls -la
