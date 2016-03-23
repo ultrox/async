@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[])
 {
-    if(argc != 2) {
+    if (argc != 2) {
         printf("ERROR: You need one argument.\n");
         
         return 1;
@@ -15,33 +15,33 @@ int main(int argc, char *argv[])
         switch (letter) {
             case 'a':
             case 'A':
-                printf("%d: 'A'", i);
+                printf("%d: 'A'\n", i);
                 break;
 
             case 'e':
             case 'E':
-                printf("%d: 'E'", i);
+                printf("%d: 'E'\n", i);
                 break;
             
             case 'i':
             case 'I':
-                printf("%d: 'I'", i);
+                printf("%d: 'I'\n", i);
                 break;
 
             case 'o':
             case 'O':
-                printf("%d: 'O'", i);
+                printf("%d: 'O'\n", i);
                 break;
 
             case 'u':
             case 'U':
-                printf("%d: 'U'", i);
+                printf("%d: 'U'\n", i);
                 break;
 
             case 'y':
             case 'Y':
                 if (i > 2) {
-                    printf("%d: 'Y'", i);
+                    printf("%d: 'Y'\n", i);
                 }
                 break;
             
