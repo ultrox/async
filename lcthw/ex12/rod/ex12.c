@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     char full_name[] = {
         'Z', 'e', 'd', ' ',
         'A', '.', ' ',
-        'S', 'h', 'a', 'w', '\0'
+        'S', 'h', 'a', 'w'
     };
 
     printf("The size of an int: %ld\n", sizeof(int));
