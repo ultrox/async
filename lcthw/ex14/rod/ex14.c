@@ -1,23 +1,24 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int can_print_it(char ch);
-void print_letters(char arg[]);
+void print_letters(char arg[], int len);
 
 void print_arguments(int argc, char *argv[])
 {
     int i = 0;
 
-    for (i = 0; i < argc; i++) {
-        print_letters(argv[i]);
+    for (i = 1; i < argc; i++) {
+        print_letters(argv[i], strlen(argv[i]));
     }
 }
 
-void print_letters(char arg[]) 
+void print_letters(char arg[], int len) 
 {
     int i = 0;
 
-    for (i = 0; arg[i] != '\0'; i++) {
+    for (i = 0; len ; i++) {
         char ch = arg[i];
 
         if (can_print_it(ch)) {
