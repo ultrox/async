@@ -42,6 +42,11 @@ int main(int argc, char *argv[])
         printf("%s lived %d years so far.\n",
                 *cur_name, *cur_age);
     }
+    
+    int age_size = sizeof(cur_age);
+    int name_size = sizeof(cur_name);
+
+    printf("age %d; name %d\n", age_size, name_size);
 
     return 0;
 }
