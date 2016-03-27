@@ -10,7 +10,8 @@ void print_arguments(int argc, char *argv[])
     int i = 0;
 
     for (i = 1; i < argc; i++) {
-        print_letters(argv[i], strlen(argv[i]));
+        printf("%d", strlen(const argv[i]));
+       // print_letters(argv[i], strlen(argv[i]));
     }
 }
 
