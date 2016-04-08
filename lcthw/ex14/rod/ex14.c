@@ -3,23 +3,22 @@
 #include <string.h>
 
 int can_print_it(char ch);
-void print_letters(char arg[], int len);
+void print_letters(char arg[]);
 
 void print_arguments(int argc, char *argv[])
 {
     int i = 0;
 
     for (i = 1; i < argc; i++) {
-        printf("%d", strlen(const argv[i]));
-       // print_letters(argv[i], strlen(argv[i]));
+        print_letters(argv[i]);
     }
 }
 
-void print_letters(char arg[], int len) 
+void print_letters(char arg[]) 
 {
     int i = 0;
 
-    for (i = 0; len ; i++) {
+    for (i = 0; i < strlen(arg) ; i++) {
         char ch = arg[i];
 
         if (can_print_it(ch)) {
