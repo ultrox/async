@@ -43,10 +43,21 @@ int main(int argc, char *argv[])
                 *cur_name, *cur_age);
     }
     
+    for (i = 0; i < count; i++) {
+        printf("Age pointer is %p; name pointer is %p.\n", cur_age[i], cur_name[i]);
+    }
+
+    for (i = 0; i < count; i++) {
+        printf("Age pointer is %p; name pointer is %p.\n", &ages[i], &names[i]);
+    }
+
     int age_size = sizeof(cur_age);
     int name_size = sizeof(cur_name);
+    int ages_size = sizeof(ages);
+    int names_size = sizeof(names);
 
     printf("age %d; name %d\n", age_size, name_size);
+    printf("ages %d; names %d\n", ages_size, names_size);
 
     return 0;
 }
