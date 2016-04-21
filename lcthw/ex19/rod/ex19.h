@@ -1,7 +1,7 @@
 #ifndef _ex19_h
 #define _ex19_h
 
-#include <object.h>
+#include "object.h"
 
 struct Monster {
   Object proto;
@@ -18,10 +18,10 @@ struct Room {
 
   Monster *bad_guy;
 
-  struct Room *north
-  struct Room *south
-  struct Room *east
-  struct Room *west
+  struct Room *north;
+  struct Room *south;
+  struct Room *east;
+  struct Room *west;
 };
 
 typedef struct Room Room;
