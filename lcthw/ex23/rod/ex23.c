@@ -55,4 +55,48 @@ int zeds_device(char *from, char *to, int count)
   return count;
 }
 
+int valid_copy(char *data, int count, char expects)
+{
+  int i = 0;
+  for (i = 0; i < count; ++i) {
+    if (data[i] != expects) {
+      log_err("[%d] %c != %c", i, data[i], expects);
+      return 0;
+    }
+  }
+  return 1;
+}
+
+int main(int argc, char *argv[])
+{
+  char from[1000] = {'a'};
+  char to[1000] = {'c'};
+  int rc = 0;
+
+  memset(from, 'x', 1000);
+  memset(to, 'y', 1000);
+  check(valid_copy(to, 1000, 'y'), "Not initialized right");
+
+  rc = normal_copy(from, to, 1000);
+  check(rc == 1000, "Normal copy failed: %d", rc);
+  check(valid_copy(to, 1000, 'x'), "Normal copy failed");
+
+  memset(to, 'y', 1000);
+
+  rc = duffs_device(from, to, 1000);
+  check(rc ==1000, "Duff's device failed: %d", rc);
+  check(valid_copy(to, 1000, 'x'), "Duff's device failed copy");
+
+  memset(to, 'y', 1000);
+
+  rc = zeds_device(from, to, 1000);
+  check(rc ==1000, "Zed's device failed: %d", rc);
+  check(valid_copy(to, 1000, 'x'), "Zed's device failed copy");
+
+  return 0;
+
+error:
+  return 1;
+}
+
 
