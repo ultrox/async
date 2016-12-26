@@ -23,6 +23,7 @@ function output(text) {
 function getFile(file) {
 	fakeAjax(file,function(text){
 		// what do we do here?
+    output(fake_responses);
 	});
 }
 
@@ -30,3 +31,4 @@ function getFile(file) {
 getFile("file1");
 getFile("file2");
 getFile("file3");
+
