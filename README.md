@@ -1,2 +1,3 @@
-# Exercises
-A repository of coding exercises and practice.
+# Rethinking Asynchronous JavaScript
+
+Frontend Masters course from Kyle Simpson 
