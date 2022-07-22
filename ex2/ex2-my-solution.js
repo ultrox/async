@@ -23,7 +23,6 @@ function getFile(file) {
   // what do we do here?
   let toCall = () => {};
   let result = null;
-  let text, fn;
 
   // my first shitty solution
   fakeAjax(file, (response) => {
